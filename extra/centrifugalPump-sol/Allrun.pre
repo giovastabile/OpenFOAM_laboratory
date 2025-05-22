@@ -1,0 +1,27 @@
+#!/bin/sh
+cd ${0%/*} || exit 1    # Run from this directory
+
+# Source tutorial run functions
+. $WM_PROJECT_DIR/bin/tools/RunFunctions
+
+echo Extracting original mesh...
+
+tar xzf centrifugalPump-mesh.tgz
+
+runApplication topoSet -dict system/topoSetDict.createPatch
+
+mv log.topoSet log.topoSet.createPatch
+
+runApplication createPatch -overwrite
+
+runApplication renumberMesh -overwrite
+
+runApplication topoSet
+
+runApplication setsToZones -noFlipMap
+
+cp -r 0.orig 0
+
+runApplication decomposePar
+
+# ----------------------------------------------------------------- end-of-file
