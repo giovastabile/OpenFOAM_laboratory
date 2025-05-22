@@ -1,0 +1,89 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2406                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _630d60de3b-20240620 OPENFOAM=2406 version=v2406
+Arch   : "LSB;label=32;scalar=64"
+Exec   : surfaceFeatureExtract
+Date   : May 22 2025
+Time   : 09:15:19
+Host   : giova-santech
+PID    : 9657
+I/O    : uncollated
+Case   : /home/giova/OpenFOAM_laboratory/extra/ahmedBody
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+--> FOAM Warning : 
+    From static Foam::IOstreamOption::compressionType Foam::IOstreamOption::compressionEnum(const Foam::word&, compressionType)
+    in file db/options/IOstreamOption.C at line 189
+    Unknown compression specifier 'uncompressed' using compression off
+
+Note: Feature line extraction only valid on closed manifold surfaces
+
+Reading surfaceFeatureExtractDict
+
+Surfaces     : ahmedBody.stl
+Output       : ahmedBody
+Load options : offset
+Write options: writeObj=yes writeVTK=off
+
+Statistics:
+Triangles    : 94186 in 2 region(s)
+Vertices     : 47440
+Bounding Box : (9.43285e-10 0.0002 -0.195251) (1.044 0.194913 0.144099)
+
+Constructing feature set from included angle 150
+Selecting edges based purely on geometric tests: yes
+
+Initial Feature set:
+    points : 6
+    edges  : 1445
+    of which
+        region edges   : 696
+        external edges : 609
+        internal edges : 140
+
+Final Feature set:
+    points : 1443
+    of which
+        convex             : 3
+        concave            : 0
+        mixed              : 3
+        non-feature        : 1437
+    edges  : 1445
+    of which
+        external edges     : 609
+        internal edges     : 140
+        flat edges         : 0
+        open edges         : 696
+        multiply connected : 0
+
+Writing extendedFeatureEdgeMesh to "/home/giova/OpenFOAM_laboratory/extra/ahmedBody/constant/extendedFeatureEdgeMesh/ahmedBody.extendedFeatureEdgeMesh"
+
+Writing extendedEdgeMesh components to "/home/giova/OpenFOAM_laboratory/extra/ahmedBody/constant/extendedFeatureEdgeMesh/ahmedBody"
+Writing 3 convex feature points to "/home/giova/OpenFOAM_laboratory/extra/ahmedBody/constant/extendedFeatureEdgeMesh/ahmedBody_convexFeaturePts.obj"
+Writing 0 concave feature points to "/home/giova/OpenFOAM_laboratory/extra/ahmedBody/constant/extendedFeatureEdgeMesh/ahmedBody_concaveFeaturePts.obj"
+Writing 3 mixed feature points to "/home/giova/OpenFOAM_laboratory/extra/ahmedBody/constant/extendedFeatureEdgeMesh/ahmedBody_mixedFeaturePts.obj"
+Writing 3 mixed feature point structure to "/home/giova/OpenFOAM_laboratory/extra/ahmedBody/constant/extendedFeatureEdgeMesh/ahmedBody_mixedFeaturePtsStructure.obj"
+Writing 609 external edges to "/home/giova/OpenFOAM_laboratory/extra/ahmedBody/constant/extendedFeatureEdgeMesh/ahmedBody_externalEdges.obj"
+Writing 140 internal edges to "/home/giova/OpenFOAM_laboratory/extra/ahmedBody/constant/extendedFeatureEdgeMesh/ahmedBody_internalEdges.obj"
+Writing 0 flat edges to "/home/giova/OpenFOAM_laboratory/extra/ahmedBody/constant/extendedFeatureEdgeMesh/ahmedBody_flatEdges.obj"
+Writing 696 open edges to "/home/giova/OpenFOAM_laboratory/extra/ahmedBody/constant/extendedFeatureEdgeMesh/ahmedBody_openEdges.obj"
+Writing 0 multiple edges to "/home/giova/OpenFOAM_laboratory/extra/ahmedBody/constant/extendedFeatureEdgeMesh/ahmedBody_multipleEdges.obj"
+Writing 696 region edges to "/home/giova/OpenFOAM_laboratory/extra/ahmedBody/constant/extendedFeatureEdgeMesh/ahmedBody_regionEdges.obj"
+Writing 1445 edge directions to "/home/giova/OpenFOAM_laboratory/extra/ahmedBody/constant/extendedFeatureEdgeMesh/ahmedBody_edgeDirections.obj"
+
+Writing featureEdgeMesh to "/home/giova/OpenFOAM_laboratory/extra/ahmedBody/constant/triSurface/ahmedBody.eMesh"
+ExecutionTime = 0.17 s  ClockTime = 0 s
+
+End
+
