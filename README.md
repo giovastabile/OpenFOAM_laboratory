@@ -10,7 +10,7 @@ Before using the docker container you need to install docker into your system.
 
 
 ```
-git clone https://github.com/giovastabile/CFD2025
+git clone https://github.com/giovastabile/OpenFOAM_laboratory.git
 ```
 
 Then:
